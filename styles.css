@@ -1030,6 +1030,19 @@ a:focus-visible,
     flex-shrink: 0;
 }
 
+.credibility_founder-image {
+    flex-shrink: 0;
+}
+
+.credibility_avatar-img {
+    width: 120px;
+    height: 180px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    object-position: center 20%;
+    box-shadow: var(--shadow-md);
+}
+
 .credibility_founder-info h3 {
     font-family: var(--font-heading);
     font-size: 1.25rem;
@@ -1239,6 +1252,41 @@ a:focus-visible,
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 3rem;
+}
+
+/* Video Testimonials */
+.video-testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.video-testimonial {
+    background: var(--color-void);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-instant);
+}
+
+.video-testimonial:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.video-testimonial_embed {
+    background: var(--color-paper);
+}
+
+.video-testimonial_title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-paper);
+    padding: 1.25rem;
+    text-align: center;
 }
 
 .testimonials_grid {
@@ -2104,6 +2152,12 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .video-testimonials {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 3rem;
+    }
+
     .testimonials_grid {
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -2144,8 +2198,12 @@ img {
     }
 
     .hero {
-        padding: 7rem 0 4rem;
+        padding: 5rem 0 2rem;
         min-height: auto;
+    }
+
+    .hero_badge {
+        margin-bottom: 1rem;
     }
 
     .hero_container,
@@ -2165,11 +2223,22 @@ img {
     }
 
     .hero_headline {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
     }
 
     .hero_subheadline {
         font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero_features {
+        margin-bottom: 1.5rem;
+        gap: 0.75rem;
+    }
+
+    .hero_visual {
+        display: none;
     }
 
     .hero_ctas {
@@ -2262,6 +2331,43 @@ img {
     }
 
     .footer_socials {
+        justify-content: center;
+    }
+
+    /* Mobile UX Improvements */
+
+    /* 1. Hide secondary CTA on mobile */
+    .hero_ctas .button--secondary {
+        display: none;
+    }
+
+    /* 2. Hide third hero feature on mobile */
+    .hero_feature:last-child {
+        display: none;
+    }
+
+    /* 3. Hide stats 3 & 4 on mobile */
+    .stats_item:nth-child(3),
+    .stats_item:nth-child(4) {
+        display: none;
+    }
+
+    /* 4. Smaller photo and centered layout on mobile */
+    .credibility_founder {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .credibility_avatar-img {
+        width: 100px;
+        height: 150px;
+    }
+
+    /* 5. Show CTA in mobile nav menu */
+    .nav_links.is-open .nav_cta {
+        display: flex;
+        width: 100%;
         justify-content: center;
     }
 }
