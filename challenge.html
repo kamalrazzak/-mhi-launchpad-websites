@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Founder Ads Challenge | MHI Growth Engine</title>
+    <meta name="description" content="The most scalable ad format we've ever run. Uncopyable by competitors. Can't be faked by AI. Learn the exact Founder Ads methodology behind $50M+ in managed ad spend.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Challenge-specific styles */
+        .challenge-hero {
+            padding: 8rem 0 5rem;
+            background: linear-gradient(to bottom, var(--color-void-light) 0%, var(--color-void) 100%);
+        }
+
+        .challenge-hero_container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .challenge-hero_badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-spectral);
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .challenge-hero_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--color-paper);
+            margin-bottom: 1.5rem;
+        }
+
+        .challenge-hero_subheadline {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--color-paper-dim);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .challenge-video {
+            background: var(--color-paper);
+            border-radius: var(--radius-lg);
+            aspect-ratio: 16/9;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-void);
+            font-weight: 600;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .challenge-cta-box {
+            background: var(--color-void);
+            border: 2px solid var(--color-spectral);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .challenge-cta-box_price {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-cta-box_amount {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-paper);
+        }
+
+        .challenge-cta-box_period {
+            font-size: 1rem;
+            color: var(--color-paper-dim);
+        }
+
+        .challenge-cta-box_note {
+            font-size: 0.85rem;
+            color: var(--color-paper-dim);
+            margin-top: 1rem;
+        }
+
+        /* Pain Section */
+        .challenge-pain {
+            padding: 5rem 0;
+            background: var(--color-void);
+        }
+
+        .challenge-pain_container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenge-pain_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-paper);
+        }
+
+        .challenge-pain_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .challenge-pain_item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--color-void-light);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .challenge-pain_icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-glitch);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .challenge-pain_text {
+            font-size: 0.95rem;
+            color: var(--color-paper-dim);
+            line-height: 1.6;
+        }
+
+        /* Curriculum Section */
+        .challenge-curriculum {
+            padding: 5rem 0;
+            background: var(--color-void-light);
+        }
+
+        .challenge-curriculum_container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenge-curriculum_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--color-paper);
+        }
+
+        .challenge-curriculum_subheadline {
+            text-align: center;
+            font-size: 1rem;
+            color: var(--color-paper-dim);
+            margin-bottom: 3rem;
+        }
+
+        .challenge-day {
+            background: var(--color-void);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .challenge-day:hover {
+            border-color: var(--color-spectral);
+            box-shadow: var(--shadow-md);
+        }
+
+        .challenge-day_number {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: var(--color-spectral);
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .challenge-day_content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-paper);
+            margin-bottom: 0.5rem;
+        }
+
+        .challenge-day_content p {
+            font-size: 0.95rem;
+            color: var(--color-paper-dim);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-day_outcomes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .challenge-day_outcome {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--color-spectral);
+            background: var(--color-spectral-glow);
+            padding: 0.35rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+        }
+
+        /* Bonuses Section */
+        .challenge-bonuses {
+            padding: 5rem 0;
+            background: var(--color-void);
+        }
+
+        .challenge-bonuses_container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenge-bonuses_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-paper);
+        }
+
+        .challenge-bonuses_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .challenge-bonus {
+            background: var(--color-void-light);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .challenge-bonus_icon {
+            width: 56px;
+            height: 56px;
+            background: var(--color-spectral);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+        }
+
+        .challenge-bonus_icon svg {
+            width: 28px;
+            height: 28px;
+            color: #FFFFFF;
+        }
+
+        .challenge-bonus_title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-paper);
+            margin-bottom: 0.5rem;
+        }
+
+        .challenge-bonus_description {
+            font-size: 0.85rem;
+            color: var(--color-paper-dim);
+            line-height: 1.6;
+        }
+
+        .challenge-bonus_value {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-spectral);
+        }
+
+        /* Teachers Section */
+        .challenge-teachers {
+            padding: 5rem 0;
+            background: var(--color-void-light);
+        }
+
+        .challenge-teachers_container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenge-teachers_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-paper);
+        }
+
+        .challenge-teachers_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .challenge-teacher {
+            background: var(--color-void);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .challenge-teacher_avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+            margin-bottom: 1.25rem;
+        }
+
+        .challenge-teacher_avatar-placeholder {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-md);
+            background: var(--color-spectral);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 auto 1.25rem;
+        }
+
+        .challenge-teacher_name {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-paper);
+            margin-bottom: 0.25rem;
+        }
+
+        .challenge-teacher_role {
+            font-size: 0.85rem;
+            color: var(--color-spectral);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-teacher_bio {
+            font-size: 0.9rem;
+            color: var(--color-paper-dim);
+            line-height: 1.7;
+        }
+
+        /* Final CTA Section */
+        .challenge-final-cta {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+        }
+
+        .challenge-final-cta_container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .challenge-final-cta_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+        }
+
+        .challenge-final-cta_description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .challenge-final-cta_price {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .challenge-final-cta_amount {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .challenge-final-cta_period {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .challenge-final-cta_includes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .challenge-final-cta_include {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #FFFFFF;
+        }
+
+        .challenge-final-cta_include .icon--check {
+            color: #86EFAC;
+        }
+
+        .challenge-final-cta .button--white {
+            font-size: 1.1rem;
+            padding: 1.25rem 2.5rem;
+        }
+
+        .challenge-final-cta_guarantee {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* FAQ Section */
+        .challenge-faq {
+            padding: 5rem 0;
+            background: var(--color-void);
+        }
+
+        .challenge-faq_container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenge-faq_headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-paper);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .challenge-hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .challenge-pain_grid {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge-day {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .challenge-day_number {
+                margin: 0 auto;
+            }
+
+            .challenge-day_outcomes {
+                justify-content: center;
+            }
+
+            .challenge-bonuses_grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .challenge-teachers_grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .challenge-final-cta_includes {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav_container">
+            <a href="index.html" class="nav_logo">
+                <span class="nav_logo-text">MHI</span>
+                <span class="nav_logo-badge">Growth Engine</span>
+            </a>
+            <div class="nav_links">
+                <a href="#curriculum" class="nav_link">What's Inside</a>
+                <a href="#bonuses" class="nav_link">Bonuses</a>
+                <a href="#faq" class="nav_link">FAQ</a>
+                <a href="#enroll" class="nav_cta button button--primary">Join Challenge</a>
+            </div>
+            <button class="nav_mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="challenge-hero">
+        <div class="challenge-hero_container">
+            <div class="challenge-hero_badge">£47 - Instant Access</div>
+            <h1 class="challenge-hero_headline">
+                Learn How to Create Founder Ads That Scale Forever (In Just 5 Days)
+            </h1>
+            <p class="challenge-hero_subheadline">
+                Join the 5-Day Founder Ads Challenge and learn the exact methodology behind $50M+ in ad spend. The ads that don't burn out. That competitors can't copy. That AI can't fake. Just founders talking into cameras - and outselling everything else in the account.
+            </p>
+
+            <!-- Video Placeholder -->
+            <div class="challenge-video">
+                <!-- Replace with actual video embed -->
+                <span>VSL Video Goes Here</span>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="challenge-cta-box">
+                <div class="challenge-cta-box_price">
+                    <span class="challenge-cta-box_amount">£47</span>
+                    <span class="challenge-cta-box_period">one-time</span>
+                </div>
+                <a href="#enroll" class="button button--primary button--large" style="width: 100%;">
+                    Get Instant Access
+                    <svg class="button_icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <p class="challenge-cta-box_note">Instant access to all 5 videos + bonuses</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Section -->
+    <section class="challenge-pain">
+        <div class="challenge-pain_container">
+            <h2 class="challenge-pain_headline">Sound Familiar?</h2>
+            <div class="challenge-pain_grid">
+                <div class="challenge-pain_item">
+                    <svg class="challenge-pain_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9l-6 6M9 9l6 6"/>
+                    </svg>
+                    <p class="challenge-pain_text">You found UGC that worked for a week, maybe two. Then it died. So you went looking for the next one. And the next one. You're stuck on a treadmill.</p>
+                </div>
+                <div class="challenge-pain_item">
+                    <svg class="challenge-pain_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9l-6 6M9 9l6 6"/>
+                    </svg>
+                    <p class="challenge-pain_text">AI is making it worse. Your competitors can spin up thousands of ads overnight. The feed is flooding with content. Everything looks the same.</p>
+                </div>
+                <div class="challenge-pain_item">
+                    <svg class="challenge-pain_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9l-6 6M9 9l6 6"/>
+                    </svg>
+                    <p class="challenge-pain_text">You've tried putting yourself on camera but you sound like a robot reading an ad. Stiff, uncomfortable, spouting buzzwords like "premium" and "innovative."</p>
+                </div>
+                <div class="challenge-pain_item">
+                    <svg class="challenge-pain_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9l-6 6M9 9l6 6"/>
+                    </svg>
+                    <p class="challenge-pain_text">You're spending hours wrestling with AI tools, generating thousands of statics, making fake podcast clips - and getting mediocre results.</p>
+                </div>
+                <div class="challenge-pain_item">
+                    <svg class="challenge-pain_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9l-6 6M9 9l6 6"/>
+                    </svg>
+                    <p class="challenge-pain_text">Every time you scale past £10-20k spend, creative burns out. You're constantly chasing the next winner.</p>
+                </div>
+                <div class="challenge-pain_item">
+                    <svg class="challenge-pain_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9l-6 6M9 9l6 6"/>
+                    </svg>
+                    <p class="challenge-pain_text">You know there's a better way, but you don't have time to become a "content creator" on top of running your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="challenge-curriculum" id="curriculum">
+        <div class="challenge-curriculum_container">
+            <h2 class="challenge-curriculum_headline">What You'll Learn in 5 Days</h2>
+            <p class="challenge-curriculum_subheadline">The exact Founder Ads methodology behind $50M+ in managed ad spend.</p>
+
+            <div class="challenge-day">
+                <div class="challenge-day_number">01</div>
+                <div class="challenge-day_content">
+                    <h3>Why Founder Ads Work</h3>
+                    <p>The science behind why faces convert. Why your brain trusts founders over UGC creators. And why AI flooding the feed makes this more important than ever. You'll understand exactly why this format scales when everything else burns out.</p>
+                    <div class="challenge-day_outcomes">
+                        <span class="challenge-day_outcome">The psychology of faces</span>
+                        <span class="challenge-day_outcome">Why AI can't fake this</span>
+                        <span class="challenge-day_outcome">The longevity advantage</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="challenge-day">
+                <div class="challenge-day_number">02</div>
+                <div class="challenge-day_content">
+                    <h3>Questions, Not Scripts</h3>
+                    <p>The second a camera turns on, founders change. They stop talking like themselves and start talking like a website. We'll show you the exact questions that disable your "marketing brain" and unlock million-pound answers.</p>
+                    <div class="challenge-day_outcomes">
+                        <span class="challenge-day_outcome">The question framework</span>
+                        <span class="challenge-day_outcome">Prompts that unlock gold</span>
+                        <span class="challenge-day_outcome">Why scripts kill authenticity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="challenge-day">
+                <div class="challenge-day_number">03</div>
+                <div class="challenge-day_content">
+                    <h3>Stories, Not Statements</h3>
+                    <p>Stories are 22x more memorable than facts. We'll show you how to guide founders into storytelling without them realising. The difference between "This is comfortable" and "I can get on the floor with my kids in this."</p>
+                    <div class="challenge-day_outcomes">
+                        <span class="challenge-day_outcome">Story frameworks</span>
+                        <span class="challenge-day_outcome">Customer story mining</span>
+                        <span class="challenge-day_outcome">Emotional hooks that convert</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="challenge-day">
+                <div class="challenge-day_number">04</div>
+                <div class="challenge-day_content">
+                    <h3>How to Film (Imperfection Wins)</h3>
+                    <p>The ads that scaled past $100k weren't polished. They were filmed in warehouses, cars, kitchens. The founder looked a little uncomfortable. Your customer's brain isn't seeking perfection - it's seeking imperfection.</p>
+                    <div class="challenge-day_outcomes">
+                        <span class="challenge-day_outcome">Location strategy</span>
+                        <span class="challenge-day_outcome">The 2-hour monthly system</span>
+                        <span class="challenge-day_outcome">Getting comfortable on camera</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="challenge-day">
+                <div class="challenge-day_number">05</div>
+                <div class="challenge-day_content">
+                    <h3>Testing & Scaling</h3>
+                    <p>One hour of filming gives you dozens of testable variations. We'll show you how to test hooks aggressively, kill ads fast when they plateau, spin variations from winners, and scale what works without burning the account.</p>
+                    <div class="challenge-day_outcomes">
+                        <span class="challenge-day_outcome">Hook testing system</span>
+                        <span class="challenge-day_outcome">Kill criteria</span>
+                        <span class="challenge-day_outcome">Scaling without burning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Section -->
+    <section class="challenge-bonuses" id="bonuses">
+        <div class="challenge-bonuses_container">
+            <h2 class="challenge-bonuses_headline">Plus These Bonuses</h2>
+            <div class="challenge-bonuses_grid">
+                <div class="challenge-bonus">
+                    <div class="challenge-bonus_icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18V5l12-2v13"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="challenge-bonus_title">The Question Prompt Sheet</h3>
+                    <p class="challenge-bonus_description">The exact questions we use with our founders. The same prompts that unlocked Beyond Nine, million-dollar months, and some very awkward, very profitable videos.</p>
+                    <p class="challenge-bonus_value">Value: £197</p>
+                </div>
+                <div class="challenge-bonus">
+                    <div class="challenge-bonus_icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                            <path d="M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3 class="challenge-bonus_title">Founder Ads Swipe File</h3>
+                    <p class="challenge-bonus_description">Real founder ads that scaled past $100k. See exactly what works - the hooks, the settings, the delivery. Broken down so you can model them.</p>
+                    <p class="challenge-bonus_value">Value: £147</p>
+                </div>
+                <div class="challenge-bonus">
+                    <div class="challenge-bonus_icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.5 4h-5L7 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3l-2.5-3z"/>
+                            <circle cx="12" cy="13" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="challenge-bonus_title">Filming Setup Guide</h3>
+                    <p class="challenge-bonus_description">The exact equipment, lighting, and settings we recommend. Most founders overcomplicate this. We'll show you the minimum viable setup.</p>
+                    <p class="challenge-bonus_value">Value: £47</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="challenge-teachers" id="teachers">
+        <div class="challenge-teachers_container">
+            <h2 class="challenge-teachers_headline">Your Teachers</h2>
+            <div class="challenge-teachers_grid">
+                <div class="challenge-teacher">
+                    <img src="kamalheadshot.jpg" alt="Kamal Razzak" class="challenge-teacher_avatar">
+                    <h3 class="challenge-teacher_name">Kamal Razzak</h3>
+                    <p class="challenge-teacher_role">Founder, MHI Media</p>
+                    <p class="challenge-teacher_bio">$100M+ in ad spend managed. Scaled Ripley Rader to $2M/month, took Icy Bear from 30k to 400k in 9 months. Six years in the trenches figuring out what actually works.</p>
+                </div>
+                <div class="challenge-teacher">
+                    <div class="challenge-teacher_avatar-placeholder">??</div>
+                    <h3 class="challenge-teacher_name">[Second Teacher]</h3>
+                    <p class="challenge-teacher_role">[Role]</p>
+                    <p class="challenge-teacher_bio">[Bio - add details about the second teacher here]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="challenge-faq" id="faq">
+        <div class="challenge-faq_container">
+            <h2 class="challenge-faq_headline">Questions?</h2>
+            <div class="faq_list">
+                <div class="faq_item">
+                    <button class="faq_question" aria-expanded="false">
+                        <span>I'm not good on camera. Will this work for me?</span>
+                        <svg class="faq_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq_answer">
+                        <p>That's actually a good thing. The founders who scale aren't polished performers - they look a little uncomfortable. Your brain trusts imperfection. We'll show you how to get natural, authentic footage without needing to be "good" on camera.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_question" aria-expanded="false">
+                        <span>I don't have time to become a content creator.</span>
+                        <svg class="faq_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq_answer">
+                        <p>Good news - you don't have to. Most founders we work with film for about two hours a month. One session gives us dozens of ad variations. That's it. You're not becoming a content creator. You're capturing honest answers, then testing them properly.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_question" aria-expanded="false">
+                        <span>Does this work in my industry?</span>
+                        <svg class="faq_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq_answer">
+                        <p>We started in fashion but we've branched out considerably - and we haven't found an industry where founder ads don't work. Fashion, supplements, skincare, home goods. If you're selling a product and there's a human behind it, this works.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_question" aria-expanded="false">
+                        <span>How long do I have access?</span>
+                        <svg class="faq_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq_answer">
+                        <p>Lifetime access. Once you're in, you can watch the videos as many times as you want, forever. No expiration.</p>
+                    </div>
+                </div>
+                <div class="faq_item">
+                    <button class="faq_question" aria-expanded="false">
+                        <span>What's the catch?</span>
+                        <svg class="faq_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq_answer">
+                        <p>No catch. At the end of Day 5, we'll tell you about MHI Growth Engine if you want help implementing everything at scale. But there's no pressure. The challenge stands on its own, and you'll walk away with actionable knowledge either way.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="challenge-final-cta" id="enroll">
+        <div class="challenge-final-cta_container">
+            <h2 class="challenge-final-cta_headline">Stop Making Ads. Start Having Conversations.</h2>
+            <p class="challenge-final-cta_description">
+                Your competitors are racing to generate more AI content. The brands that are winning are doing the opposite - they're doubling down on what AI can't do. In a world of infinite AI-generated content, the scarcest thing is authenticity. And you have unlimited access to it.
+            </p>
+            <div class="challenge-final-cta_price">
+                <span class="challenge-final-cta_amount">£47</span>
+                <span class="challenge-final-cta_period">one-time</span>
+            </div>
+            <div class="challenge-final-cta_includes">
+                <div class="challenge-final-cta_include">
+                    <svg class="icon icon--check" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>5 video lessons</span>
+                </div>
+                <div class="challenge-final-cta_include">
+                    <svg class="icon icon--check" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Question prompt sheet</span>
+                </div>
+                <div class="challenge-final-cta_include">
+                    <svg class="icon icon--check" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Lifetime access</span>
+                </div>
+            </div>
+            <a href="#" class="button button--white button--large">
+                Get Instant Access
+                <svg class="button_icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <p class="challenge-final-cta_guarantee">30-day money-back guarantee. If it's not for you, just email us.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 MHI Media Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq_question').forEach(button => {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.faq_question').forEach(btn => {
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.closest('.faq_item').classList.remove('is-open');
+                });
+                if (!isExpanded) {
+                    button.setAttribute('aria-expanded', 'true');
+                    button.closest('.faq_item').classList.add('is-open');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.nav_mobile-toggle');
+        const navLinks = document.querySelector('.nav_links');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('is-active');
+                navLinks.classList.toggle('is-open');
+            });
+        }
+
+        // Add scroll class to nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('is-scrolled');
+            } else {
+                nav.classList.remove('is-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
