@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny DeVito | MHI Growth Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .danny-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .danny {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .danny:hover {
+            transform: scale(1.05);
+        }
+
+        .danny img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .danny:nth-child(odd) {
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        .danny:nth-child(even) {
+            animation: wiggle 2s ease-in-out infinite reverse;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        .danny:hover {
+            animation: none;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Danny DeVito</h1>
+    <div class="danny-grid">
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://flxt.tmsimg.com/assets/71625_v9_bb.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://m.media-amazon.com/images/M/MV5BNWEzYzE1NzctNDFhYy00NTI2LTg3MzMtMGI4NGI4OWRjMmJhXkEyXkFqcGc@._V1_.jpg" alt="Danny DeVito"></div>
+        <div class="danny"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-138109600.jpg" alt="Danny DeVito"></div>
+    </div>
+</body>
+</html>
