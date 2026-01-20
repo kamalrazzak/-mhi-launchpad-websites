@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Cam | Man United vs Brighton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #da291c 0%, #8b0000 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .record {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .record-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ffd700;
+        }
+
+        .record-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .wins-list {
+            list-style: none;
+        }
+
+        .win-item {
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .win-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .win-date {
+            font-weight: 700;
+            color: #333;
+            min-width: 120px;
+        }
+
+        .win-score {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #da291c;
+            background: #fff3cd;
+            padding: 0.25rem 0.75rem;
+            border-radius: 8px;
+        }
+
+        .win-comp {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: right;
+            min-width: 150px;
+        }
+
+        .win-details {
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .win-venue {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .win-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            .win-date, .win-comp {
+                min-width: auto;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>For Cam</h1>
+        <p class="subtitle">Every Time Manchester United Beat Brighton</p>
+
+        <div class="record">
+            <div class="record-number">22</div>
+            <div class="record-label">Total Wins (All Competitions)</div>
+        </div>
+
+        <ul class="wins-list">
+            <li class="win-item">
+                <span class="win-date">25 Oct 2025</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">4-2</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">19 May 2024</span>
+                <div class="win-details">
+                    <span class="win-venue">Amex Stadium</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">15 Feb 2022</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">4 Apr 2021</span>
+                <div class="win-details">
+                    <span class="win-venue">Amex Stadium</span>
+                </div>
+                <span class="win-score">2-1</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">30 Sep 2020</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">3-0</span>
+                <span class="win-comp">EFL Cup R4</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">26 Sep 2020</span>
+                <div class="win-details">
+                    <span class="win-venue">Amex Stadium</span>
+                </div>
+                <span class="win-score">3-2</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">30 Jun 2020</span>
+                <div class="win-details">
+                    <span class="win-venue">Amex Stadium</span>
+                </div>
+                <span class="win-score">3-0</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">10 Nov 2019</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">3-1</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">19 Jan 2019</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-1</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">17 Mar 2018</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">FA Cup QF</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">25 Nov 2017</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">1-0</span>
+                <span class="win-comp">Premier League</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">23 Jan 1993</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">FA Cup R4</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">7 Oct 1992</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">1-0</span>
+                <span class="win-comp">League Cup R2</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">26 May 1983</span>
+                <div class="win-details">
+                    <span class="win-venue">Wembley (FA Cup Final Replay)</span>
+                </div>
+                <span class="win-score">4-0</span>
+                <span class="win-comp">FA Cup Final</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">24 Apr 1982</span>
+                <div class="win-details">
+                    <span class="win-venue">Goldstone Ground</span>
+                </div>
+                <span class="win-score">1-0</span>
+                <span class="win-comp">First Division</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">28 Nov 1981</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">First Division</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">10 Jan 1981</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-1</span>
+                <span class="win-comp">First Division</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">7 Jan 1981</span>
+                <div class="win-details">
+                    <span class="win-venue">Goldstone Ground</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">FA Cup R3 Replay</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">22 Nov 1980</span>
+                <div class="win-details">
+                    <span class="win-venue">Goldstone Ground</span>
+                </div>
+                <span class="win-score">4-1</span>
+                <span class="win-comp">First Division</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">6 Oct 1979</span>
+                <div class="win-details">
+                    <span class="win-venue">Old Trafford</span>
+                </div>
+                <span class="win-score">2-0</span>
+                <span class="win-comp">First Division</span>
+            </li>
+            <li class="win-item">
+                <span class="win-date">16 Jan 1909</span>
+                <div class="win-details">
+                    <span class="win-venue">Clayton Road</span>
+                </div>
+                <span class="win-score">1-0</span>
+                <span class="win-comp">FA Cup R1</span>
+            </li>
+        </ul>
+
+        <p class="footer">Glory Glory Man United</p>
+    </div>
+</body>
+</html>
