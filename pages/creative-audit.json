@@ -1,0 +1,33 @@
+{
+  "slug": "creative-audit",
+  "template": "lead-magnet",
+
+  "BEEHIIV_PUBLICATION_ID": "9525f63c-35f3-4291-86e0-f9f8fdd82e61",
+
+  "TITLE": "Free Creative Testing Audit Checklist",
+  "DESCRIPTION": "The exact checklist MHI Media uses to audit DTC brands' creative testing infrastructure. Stop wasting ad spend on untested creative.",
+
+  "BADGE_TEXT": "Free Download - Used by 50+ DTC Brands",
+  "HEADLINE": "Stop Guessing Which Ads Will Work",
+  "SUBHEADLINE": "Download the exact creative testing audit checklist we use to help DTC brands achieve 100%+ ROAS improvements.",
+  "CTA_TEXT": "Get Free Checklist",
+  "PRIVACY_TEXT": "No spam. Unsubscribe anytime.",
+
+  "STAT_1_NUMBER": "100%+",
+  "STAT_1_LABEL": "Avg ROAS Lift",
+  "STAT_2_NUMBER": "50+",
+  "STAT_2_LABEL": "Brands Helped",
+  "STAT_3_NUMBER": "500+",
+  "STAT_3_LABEL": "Creatives Tested",
+
+  "BENEFITS_INTRO": "Everything you need to audit and improve your creative testing process.",
+
+  "BENEFIT_1_TITLE": "Testing Framework",
+  "BENEFIT_1_DESC": "Our proven 3-phase approach to creative testing that consistently delivers winning ads.",
+
+  "BENEFIT_2_TITLE": "Audit Checklist",
+  "BENEFIT_2_DESC": "17-point checklist to identify gaps in your current testing infrastructure.",
+
+  "BENEFIT_3_TITLE": "Quick Wins",
+  "BENEFIT_3_DESC": "Immediate optimizations you can implement today to improve creative performance."
+}

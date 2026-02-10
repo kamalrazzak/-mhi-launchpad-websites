@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | MHI Media</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mhi-navy': '#1E2761',
+                        'mhi-blue': '#1F4788',
+                        'mhi-light': '#F0F4F8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-mhi-navy to-mhi-blue px-4 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Badge -->
+            <div class="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+                {{BADGE_TEXT}}
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                {{HEADLINE}}
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto">
+                {{SUBHEADLINE}}
+            </p>
+
+            <!-- Email Form - Beehiiv Integration -->
+            <form id="signup-form" class="max-w-md mx-auto" data-beehiiv-publication="{{BEEHIIV_PUBLICATION_ID}}">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                        class="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
+                    >
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="bg-white text-mhi-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-mhi-light transition-all hover:scale-105 disabled:opacity-50"
+                    >
+                        {{CTA_TEXT}}
+                    </button>
+                </div>
+                <p class="text-white/60 text-sm mt-4">{{PRIVACY_TEXT}}</p>
+            </form>
+
+            <!-- Social Proof -->
+            <div class="mt-12 flex items-center justify-center gap-8 text-white/70">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">{{STAT_1_NUMBER}}</div>
+                    <div class="text-sm">{{STAT_1_LABEL}}</div>
+                </div>
+                <div class="w-px h-12 bg-white/20"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">{{STAT_2_NUMBER}}</div>
+                    <div class="text-sm">{{STAT_2_LABEL}}</div>
+                </div>
+                <div class="w-px h-12 bg-white/20"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">{{STAT_3_NUMBER}}</div>
+                    <div class="text-sm">{{STAT_3_LABEL}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Get Section -->
+    <section class="py-20 px-4 bg-mhi-light">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-mhi-navy text-center mb-4">
+                What You'll Get
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                {{BENEFITS_INTRO}}
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-12 h-12 bg-mhi-navy/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-mhi-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-mhi-navy mb-2">{{BENEFIT_1_TITLE}}</h3>
+                    <p class="text-gray-600">{{BENEFIT_1_DESC}}</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-12 h-12 bg-mhi-navy/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-mhi-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-mhi-navy mb-2">{{BENEFIT_2_TITLE}}</h3>
+                    <p class="text-gray-600">{{BENEFIT_2_DESC}}</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-12 h-12 bg-mhi-navy/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-mhi-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-mhi-navy mb-2">{{BENEFIT_3_TITLE}}</h3>
+                    <p class="text-gray-600">{{BENEFIT_3_DESC}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About MHI Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm text-gray-500 uppercase tracking-wider mb-4">Created by</p>
+            <h3 class="text-2xl font-bold text-mhi-navy mb-4">MHI Media</h3>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                UK-based DTC creative agency specializing in Creative Strategy, UGC Production, Paid Ads, and Testing & Optimization. We've helped brands achieve 100%+ ROAS improvements through systematic creative testing.
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="https://mhimedia.com" target="_blank" class="text-mhi-blue hover:text-mhi-navy font-medium">
+                    Visit Website →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mhi-navy py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center text-white/60 text-sm">
+            <p>© 2026 MHI Media. All rights reserved.</p>
+            <p class="mt-2">80 Stokes Croft, Bristol, UK</p>
+        </div>
+    </footer>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-mhi-navy mb-2">You're In!</h3>
+            <p class="text-gray-600 mb-6">Check your email for the download link. If you don't see it, check your spam folder.</p>
+            <button onclick="closeModal()" class="bg-mhi-navy text-white px-6 py-3 rounded-lg font-medium hover:bg-mhi-blue transition-colors">
+                Got it
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Beehiiv Form Integration via Netlify Function
+        const form = document.getElementById('signup-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const publicationId = form.dataset.beehiivPublication;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = form.email.value;
+            const originalText = submitBtn.textContent;
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Subscribing...';
+
+            try {
+                // Submit via Netlify serverless function (avoids CORS)
+                const response = await fetch('/.netlify/functions/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        publicationId: publicationId
+                    })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Subscription failed');
+                }
+
+                // Show success modal
+                document.getElementById('thank-you-modal').classList.remove('hidden');
+                document.getElementById('thank-you-modal').classList.add('flex');
+                form.reset();
+
+            } catch (error) {
+                console.error('Subscription error:', error);
+                alert('Something went wrong. Please try again.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+
+        function closeModal() {
+            document.getElementById('thank-you-modal').classList.add('hidden');
+            document.getElementById('thank-you-modal').classList.remove('flex');
+        }
+    </script>
+</body>
+</html>

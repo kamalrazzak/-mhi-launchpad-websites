@@ -1,0 +1,20 @@
+{
+  "name": "lp-deployer",
+  "version": "1.0.0",
+  "description": "MHI Media Landing Page Deployer",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && npx netlify dev",
+    "deploy": "node build.js && npx netlify deploy --prod",
+    "deploy:preview": "node build.js && npx netlify deploy",
+    "new": "node scripts/new-page.js"
+  },
+  "keywords": ["landing-page", "mhi-media", "netlify"],
+  "author": "MHI Media",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "netlify-cli": "^23.15.1"
+  }
+}
