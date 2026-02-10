@@ -48,31 +48,15 @@ pageFiles.forEach(pageFile => {
     console.log(`✅ Built: /${config.slug}/`);
 });
 
-// Create root index that lists all pages (for development)
-const indexHtml = `<!DOCTYPE html>
-<html>
-<head>
-    <title>LP Deployer - MHI Media</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 min-h-screen p-8">
-    <div class="max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold text-gray-900 mb-2">LP Deployer</h1>
-        <p class="text-gray-600 mb-8">MHI Media Landing Pages</p>
-        <div class="bg-white rounded-lg shadow-sm divide-y">
-            ${pageFiles.map(f => {
-                const config = JSON.parse(fs.readFileSync(path.join(PAGES_DIR, f), 'utf8'));
-                return `<a href="/${config.slug}/" class="block p-4 hover:bg-gray-50">
-                    <div class="font-medium text-gray-900">${config.TITLE}</div>
-                    <div class="text-sm text-gray-500">/${config.slug}/</div>
-                </a>`;
-            }).join('\n')}
-        </div>
-    </div>
-</body>
-</html>`;
-
-fs.writeFileSync(path.join(DIST_DIR, 'index.html'), indexHtml);
+// Use homepage template for root index
+const homepageTemplate = path.join(TEMPLATES_DIR, 'homepage.html');
+if (fs.existsSync(homepageTemplate)) {
+    const homepageHtml = fs.readFileSync(homepageTemplate, 'utf8');
+    fs.writeFileSync(path.join(DIST_DIR, 'index.html'), homepageHtml);
+    console.log(`✅ Built: / (homepage)`);
+} else {
+    console.log(`⚠️ No homepage template found`);
+}
 
 console.log(`\n📦 Build complete! Output in ./dist/\n`);
 console.log(`Run 'npm run deploy' to deploy to Netlify\n`);
